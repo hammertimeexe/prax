@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Praxis · Hire on proof</title>
+    <meta name="description" content="Praxis assesses candidates on real work: real projects and real prompts, graded by hidden tests into a skill profile your team can trust." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Praxis home">
+        <svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><rect x="3" y="3" width="34" height="34" fill="none" stroke="currentColor" stroke-width="6" /><rect x="24" y="24" width="40" height="40" fill="currentColor" /><rect x="17" y="17" width="21" height="21" fill="#FF3001" /></svg>
+        <span>Praxis<i>.</i></span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="#attempt">How it works</a>
+        <a href="#engines">Engines</a>
+        <a href="#trust">Trust</a>
+        <a href="#teams">For teams</a>
+      </nav>
+      <a class="nav-cta" href="#cta">Book a demo</a>
+    </header>
+
+    <main id="top">
+      <!-- 1. Hero -->
+      <section class="chapter hero" id="hero" data-chapter="hero">
+        <div class="sticky">
+          <p class="eyebrow mono">Skills assessment · project-based · prompt engineering</p>
+          <div class="hero-foot">
+            <h1>Hire on proof,<br /><span class="dim">not promises.</span></h1>
+            <div class="hero-side">
+              <p>Candidates build a real project or write a real prompt. Hidden tests grade the work into a skill profile your team can trust.</p>
+              <a class="btn" href="#cta">Book a demo <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <p class="scroll-cue mono" aria-hidden="true"><span></span>Scroll</p>
+        </div>
+      </section>
+
+      <!-- 2. Noise -> signal -->
+      <section class="chapter noise" id="noise" data-chapter="noise">
+        <div class="sticky">
+          <div class="beat" data-beat="0"><p class="mono kicker">01 · The problem</p><h2>One role.<br />A thousand applications.</h2></div>
+          <div class="beat" data-beat="1"><h2>Every CV is a <em>claim.</em></h2><p class="lede">Titles, keywords, years of experience. None of it shows what someone can actually build.</p></div>
+          <div class="beat" data-beat="2"><h2>Praxis asks for <em class="orange">the work.</em></h2><p class="lede">One block of real evidence says more than a thousand claims.</p></div>
+        </div>
+      </section>
+
+      <!-- 3. The attempt -->
+      <section class="chapter attempt" id="attempt" data-chapter="attempt">
+        <div class="sticky">
+          <div class="beat left" data-beat="0"><p class="mono kicker">02 · The attempt</p><h2>90 minutes.<br />A real project.</h2><p class="lede">An editor, a terminal and a live preview, in a cloud sandbox of their own. The server owns the clock.</p></div>
+          <div class="beat left" data-beat="1"><h2>Work saves<br />as they type.</h2><p class="lede">Self-check tests run whenever they like. When time is up, the work is submitted for them.</p></div>
+          <div class="beat left" data-beat="2"><h2>Then the<br /><em class="orange">hidden tests</em> run.</h2><p class="lede">In a fresh sandbox, on their source only. Nothing the candidate wrote can touch the grader.</p></div>
+          <ul class="stacks mono" aria-label="Supported stacks">
+            <li>React</li><li>Vue</li><li>Angular</li><li>Next.js</li><li>Node</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Django</li><li>Python AI</li><li>Go</li><li>Spring Boot</li><li>.NET</li><li>HTML/CSS/JS</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. The grade -->
+      <section class="chapter grade" id="grade" data-chapter="grade">
+        <div class="sticky">
+          <div class="beat left"><p class="mono kicker">03 · The grade</p><h2>Every test is <em class="orange">evidence.</em></h2><p class="lede">Each hidden test proves a skill. Basic tests count once, intermediate twice, advanced three times.</p></div>
+          <div class="beat left"><h2>Evidence becomes a skill profile.</h2><p class="lede"><span class="mono orange">fe.state</span> means the same thing in every report, on every stack, so candidates compare fairly.</p></div>
+          <div class="beat left">
+            <article class="report" aria-label="Sample report">
+              <header><span class="mono">Todo list · React + Vite</span><span class="rec mono">Shortlist</span></header>
+              <div class="report-score"><b data-score>81</b><span>/ 100<br /><i class="mono">pass mark 50</i></span></div>
+              <ul class="report-skills" data-skills></ul>
+              <footer class="mono">Every test and why it passed · PDF · code as a zip</footer>
+            </article>
+            <p class="lede small">Infrastructure failures are never scored as zero.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Engines -->
+      <section class="chapter engines" id="engines" data-chapter="engines">
+        <div class="sticky">
+          <div class="beat"><p class="mono kicker">04 · Engines</p><h2>One core. Two engines.</h2><p class="lede">Praxis core runs clients, campaigns, invitations, release and audit. Assessment engines plug in through the Engine Contract.</p></div>
+          <div class="beat"><h2>Project-based.</h2><p class="lede">A real project in a cloud IDE, in 14 stacks. Hidden tests, a skill map, a report PDF and the code as a zip.</p></div>
+          <div class="beat"><h2>Prompt <em class="orange">engineering.</em></h2><p class="lede">System and user prompts run on real models, graded on hidden cases for correctness, quality and cost against a reference prompt. Then run again for consistency.</p></div>
+        </div>
+      </section>
+
+      <!-- 6. Trust -->
+      <section class="chapter trust" id="trust" data-chapter="trust">
+        <div class="sticky">
+          <div class="beat left"><p class="mono kicker">05 · Trust</p><h2>Signals,<br />not verdicts.</h2><p class="lede">Time away from the tab, leaving full screen, pastes. Logged with context for a person to review.</p></div>
+          <div class="beat left"><h2>Reviewed,<br />then released.</h2><p class="lede">Praxis reviews every result before the client sees it. Withdraw one and its share links stop working.</p></div>
+          <div class="beat left"><h2>Isolated by<br />the database.</h2><p class="lede">Row-level security keeps each client's data apart, and every sensitive action is audited.</p></div>
+        </div>
+      </section>
+
+      <!-- 7. For teams -->
+      <section class="teams" id="teams" data-chapter="teams">
+        <div class="teams-head reveal"><p class="mono kicker">06 · For hiring teams</p><h2>Fits the way<br />you already hire.</h2></div>
+        <div class="cards">
+          <article class="card reveal"><span class="mono">01</span><h3>Campaigns</h3><p>Invite candidates with an access code, or share one open link for a role.</p></article>
+          <article class="card reveal"><span class="mono">02</span><h3>The report</h3><p>Score, recommendation, every skill and every test, and why it passed or failed.</p></article>
+          <article class="card reveal"><span class="mono">03</span><h3>PDF and code</h3><p>Download the report as a PDF and the candidate's code as a zip.</p></article>
+          <article class="card reveal"><span class="mono">04</span><h3>Pipeline</h3><p>Dashboards, filters, saved views and CSV exports across every campaign.</p></article>
+          <article class="card reveal"><span class="mono">05</span><h3>API and webhooks</h3><p>API keys, orders and signed webhooks, retried until your system says yes.</p></article>
+          <article class="card reveal accent"><span class="mono">06</span><h3>Greenhouse</h3><p>Praxis is an assessment partner: send a test from Greenhouse, get a score per skill back.</p></article>
+        </div>
+        <div class="flow reveal" aria-label="Greenhouse flow">
+          <div class="step"><span class="mono">Greenhouse</span><b>send_test</b></div>
+          <i aria-hidden="true"></i>
+          <div class="step"><span class="mono">Praxis</span><b>candidate emailed</b></div>
+          <i aria-hidden="true"></i>
+          <div class="step"><span class="mono">Praxis</span><b>result released</b></div>
+          <i aria-hidden="true"></i>
+          <div class="step on"><span class="mono">Greenhouse</span><b>score per skill</b></div>
+        </div>
+        <pre class="code mono reveal"><span class="dim">POST https://your-app.example/webhooks/praxis</span>
+<span class="orange">Praxis-Signature:</span> t=1760000000,v1=9f2c…e81a
+<span class="orange">Praxis-Delivery:</span> dlv_01J…
+
+{ "event": "order.completed", "order": { "status": "complete", … } }</pre>
+      </section>
+
+      <!-- 8. CTA -->
+      <section class="chapter cta" id="cta" data-chapter="cta">
+        <div class="sticky center">
+          <h2 class="cta-title">Hire on <em class="orange">proof.</em></h2>
+          <div class="cta-actions"><a class="btn" href="mailto:hello@praxis.example?subject=Praxis%20demo">Book a demo <span aria-hidden="true">→</span></a><a class="btn ghost" href="#grade">See a sample report</a></div>
+          <footer class="foot mono"><span>Praxis<i class="orange">.</i></span><span>Project-based · Prompt engineering</span><span>© 2026</span></footer>
+        </div>
+      </section>
+    </main>
+
+    <div class="loader" id="loader" aria-hidden="true"><span class="mono">Assembling theory ∩ practice</span><b></b></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
