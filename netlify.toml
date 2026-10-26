@@ -5,7 +5,19 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Server functions: the sample-report email and the chatbot. They read their
+# secrets from Netlify environment variables (see .env.example), never the repo.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

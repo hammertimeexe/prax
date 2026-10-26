@@ -3,3 +3,6 @@ dist/
 .netlify/
 *.blend1
 .DS_Store
+.env
+.env.*
+!.env.example
